@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#04354f"><meta name="description" content="一段关于母亲与孩子的短短回忆。点击相框，读懂那些没说出口的牵挂。"><title>那些没说出口的牵挂</title><link rel="preload" as="image" href="room-warm.webp"><link rel="stylesheet" href="style.css?v=ui4"></head>
+<body>
+<main id="book" aria-label="那些没说出口的牵挂，三幕互动故事">
+ <header><span class="brand">一封未寄出的信</span><button id="music" class="sound" aria-label="播放背景音乐" aria-pressed="false"><span class="bars"><i></i><i></i><i></i><i></i></span><span id="music-label">音乐关</span></button></header>
+ <section class="scene active" id="room" aria-label="第一幕：那一盏灯" aria-hidden="false">
+  <img class="backdrop" src="room-warm.webp" alt="一盏灯照着桌上的相框和绿色瓶子"><img class="backdrop alternate" src="room-soft.webp" alt="" aria-hidden="true">
+  <div class="chapter"><span>01 / 那一盏灯</span><h1>总有一盏灯，<br>为你亮着。</h1></div>
+  <img class="dialogue" src="text1.webp" alt="儿子，最近过得好吗？">
+  <button id="frame-hit" class="frame-hit" aria-label="点击相框，进入回忆"><span class="touch-dot"></span></button>
+  <img class="hand-hint" src="text2.webp" alt="点击相框">
+  <div class="scene-foot"><p>有些牵挂，总是从一句问候开始。</p><button class="next" data-go="1">走进回忆 <span aria-hidden="true">&nbsp;</span></button></div>
+ </section>
+ <section class="scene" id="memory" aria-label="第二幕：没说出口" aria-hidden="true" inert>
+  <img class="backdrop" src="frame.webp" alt="深蓝背景中，一只暖色的空相框">
+  <div class="chapter"><span>02 / 没说出口</span><h2>把想念，藏起来。</h2></div>
+  <img class="reply" src="text3.webp" alt="妈挺好的，不用担心">
+  <button id="tear" class="tear" aria-label="点击眼泪，读懂牵挂"><img src="tear.webp" alt="一滴蓝色眼泪"></button>
+  <img class="tear-hint" src="text4.webp" alt="点击眼泪">
+  <div class="scene-foot"><p id="memory-caption">一句“挺好的”，藏起了多少想念。</p><button class="next" data-go="2">读懂牵挂 <span aria-hidden="true">&nbsp;</span></button></div>
+ </section>
+ <section class="scene paper" id="letter" aria-label="第三幕：读懂牵挂" aria-hidden="true" inert>
+  <img class="backdrop" src="paper.webp" alt="温暖的米色纸张背景">
+  <div class="chapter"><span>03 / 读懂牵挂</span><h2>爱，是目送。<br>也是惦念。</h2></div>
+  <div class="quote-wrap"><img id="quote-main" src="text5.webp" alt="我慢慢地、慢慢地了解到，所谓父女母子一场，只不过意味着，你和他的缘分就是今生今世不断地在目送他的背影渐行渐远。你站在小路的这一端，看着他逐渐消失在小路转弯的地方，而且，他用背影默默告诉你：不必追。——龙应台《目送》"><img id="quote-song" src="text6.webp" alt="多少昼夜祈盼成蛹破茧，把爱掩藏进枕边话。光阴流，在那不拒衰老不觉多言的目常中，你知吗。——《缝纫机》" hidden></div>
+  <button id="quote-toggle" class="quote-toggle" aria-label="切换至歌词摘录"><img src="text7.webp" alt="点击歌词，分享给她"></button>
+  <div class="letter-actions"><div class="solid share-spacer" aria-hidden="true">&nbsp;<span>&nbsp;</span></div><button id="replay" class="replay">↺ 再读一遍</button></div>
+ </section>
+ <footer><button id="back" aria-label="上一幕" disabled>←</button><div class="dots" aria-label="章节导航"><button data-go="0" aria-label="第一幕" aria-current="step"></button><button data-go="1" aria-label="第二幕"></button><button data-go="2" aria-label="第三幕"></button></div><span id="page-count">01 — 03</span></footer>
+ <div id="intro" class="intro"><img class="backdrop" src="cover.webp" alt="米色背景中央的一台黑色缝纫机"><div class="intro-heading"><span aria-hidden="true">&nbsp;</span><h2>那些没说出口的<br>牵挂</h2><p>把想念，留在这一页。</p></div><div class="intro-actions"><button id="start" class="solid">轻触，打开这封信 <span aria-hidden="true">&nbsp;</span></button><p aria-hidden="true">&nbsp;</p></div></div>
+ <div id="toast" role="status"></div>
+ <audio id="audio" src="ave-maria.mp3" preload="none" loop></audio>
+</main><script src="app.js?v=ui2"></script>
+</body></html>
